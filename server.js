@@ -7,7 +7,7 @@ var fileUpload          = require('express-fileupload');
 var passport            = require('passport');
 
 
-var app = express();  
+var app = express();
 
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));                                         // log every request to the console
@@ -24,9 +24,9 @@ require('./configuration/auth')(passport);
 
 
 app.engine('html',  require('ejs').renderFile);
-app.set('view engine', 'html'); 
+app.set('view engine', 'html');
 app.use('/proxy',   require('./routes/Proxy'));
-app.use('/user',    require('./routes/User'));
+app.use('/user',    require('./routes/user'));
 app.use('/login',   require('./routes/Auth')(passport));
 app.use('/profile', require('./routes/Profile'));
 
