@@ -41,4 +41,4 @@ app.get('*', function(req, res) {
 // listen (start app with node server.js) ======================================
 var port = process.env.PORT || 3000;
 app.listen(port);
-console.log("App listening on port 80");
+console.log("App listening on port 3000");
