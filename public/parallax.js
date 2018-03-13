@@ -17,21 +17,41 @@ $(window).scroll(function () {
    $(".slogan").css({
      'opacity' : wScroll/500
    })
+   console.log(wScroll)
+   console.log($(".section-first").offset().top/2)
+   console.log(wScroll - $(".section-first").offset().top/2)
+   console.log((wScroll - $(".section-first").offset().top/2)/($(".section-first").offset().top/100));
 
-   if (wScroll > $(".section-first").offset().top - ($(window).height()/1.2)) {
+   var sectionFirstCalcCenter = (wScroll + ($(".display-2").height()/2) - $(".section-first").offset().top/2)/($(".section-first").offset().top/100);
+
+   if (wScroll > $(".section-first").offset().top/2){
      $(".display-2").css({
-       'transform' : 'translate(0px, calc(0% - '+wScroll/9+'%))'
+       'transform' : 'translateY(calc(100vh - '+sectionFirstCalcCenter+'vh))'
      })
    }
 
-   if (wScroll > $(".feature-list").offset().top - ($(window).height()/4) ){
-     console.log("scroll - " + wScroll)
-     console.log($(".feature-list").offset().top - ($(window).height()/1.2))
+   if (wScroll > $(".section-first").offset().top/2){
      $(".feature-list").css({
-       'opacity' : wScroll/1000,
-       'transform' : 'translate(0px, calc(0% - '+wScroll/17+'%))',
+       'transform' : 'translateY(calc(60vh - '+(sectionFirstCalcCenter*2)/4 +'vh))'
      })
    }
+   console.log(wScroll+"  "+$(".section-second").offset().top * 0.8)
+   if (wScroll > $(".section-second").offset().top * 0.8) {
+
+     $(".iconCont").each(function (i) {
+
+       setTimeout(function() {
+         $(".iconCont").eq(i).addClass('is-showing')
+       }, 150 * (i+1));
+
+     })
+   }
+   else{
+     $(".iconCont").each(function () {
+       $(".iconCont").removeClass('is-showing')
+     })
+   }
+
 
 
 

@@ -6,6 +6,8 @@ header{
   position: relative;
   height: 100%;
   overflow: hidden;
+  z-index: 1;
+  background-color: white;
 }
 .backgroundblur{
   position: absolute;
@@ -57,34 +59,74 @@ header{
 }
 
 .section{
+  position: relative;
+  z-index: 2;
   color: #424242;
   width: 100%;
+  overflow: hidden;
   &-first{
-    height: 1000px;
+    height: 100vh;
     .column{
       span{
         display: block;
         width: 100%;
         max-width: 400px;
         margin: auto;
-        margin-top: 100%;
         font-weight: bold;
         text-align: left;
+        transform: translateY(100vh);
       }
       .feature{
 
         &-list{
           display: block;
-          opacity: 0;
+          opacity: 1;
           width: 100%;
-          margin-top: 400px;
+          transform: translateY(75vh);
           list-style-type: none;
           font-size: 30px;
           font-weight: bold;
         }
+
       }
       }
     }
 
+    &-second{
+      height: 100vh;
+      margin-bottom: 400px;
+      .featureIcon{
+        font-size: 30px;
 
+      }
+      .iconCont{
+        opacity: 0;
+        transition: 0.3s all ease-in-out;
+        transform: translateX(20px);
+      }
+      .is-showing{
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+
+}
+main{
+  position: relative;
+  z-index: 2;
+  background-color: white;
+}
+footer{
+  position: fixed;
+  width: 100%;
+  height: 400px;
+  bottom: 0;
+  background: black;
+  z-index: 0;
+  a{
+    color: white;
+  }
+  .row{
+    margin-top: 150px;
+  }
 }
