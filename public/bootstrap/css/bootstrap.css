@@ -858,6 +858,10 @@ pre code {
 }
 
 @media (min-width: 576px) {
+  .leftMenu{
+    top:50px;
+  }
+
   .col-sm {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -1056,9 +1060,12 @@ pre code {
   .offset-sm-11 {
     margin-left: 91.666667%;
   }
+
 }
 
 @media (min-width: 768px) {
+
+
   .col-md {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -1260,6 +1267,22 @@ pre code {
 }
 
 @media (min-width: 992px) {
+  .head-up-sm{
+    max-width: 230px !important;
+    min-width: 230px !important;
+    float: left;
+  }
+  .head-bot-sm{
+    width: 100%;
+    min-width: calc(100% - 230px) !important;
+    float: left;
+  }
+
+  main{
+
+    margin-left: 230px;
+  }
+
   .col-lg {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
