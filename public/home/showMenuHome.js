@@ -1,5 +1,9 @@
 var counter = 0;
 
+$(".toggle-icon").click(function() {
+  $('#nav-container').toggleClass("pushed");
+});
+
 if ($( window ).width() > 992) {
   $(".leftMenu").css({
     'left' : '0',

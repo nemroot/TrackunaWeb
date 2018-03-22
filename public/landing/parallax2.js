@@ -5,6 +5,22 @@ $(window).scroll(function () {
      'transform' : 'translate(0px, -'+wScroll/12+'%)'
    })
 
+   if (wScroll > $(".section-second").offset().top * 0.8) {
+
+     $(".iconCont").each(function (i) {
+
+       setTimeout(function() {
+         $(".iconCont").eq(i).addClass('is-showing')
+       }, 150 * (i+1));
+
+     })
+   }
+   else{
+     $(".iconCont").each(function () {
+       $(".iconCont").removeClass('is-showing')
+     })
+   }
+
 if ($(window).width() < 700) {
 
 }
@@ -46,8 +62,8 @@ else{
 
    if (wScroll > 800) {
      $(".topbar").css({
-       'background' : 'white',
-       'box-shadow' : '0px 5px 8px -3px rgba(0,0,0,0.75)'
+       'background' : '#408EBA',
+       'box-shadow' : '0px 0px 8px -3px rgba(0,0,0,0.75)'
      })
      $(".brand").css({
        'transform' : 'translate(0px, 0px)',
