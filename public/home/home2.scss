@@ -7,6 +7,8 @@ header{
   background: black;
   margin: 0 !important;
   padding: 0 !important;
+
+
 }
 //Menu icon
 
@@ -93,19 +95,60 @@ header{
       padding-top: 15px;
     }
 
-    ul{
-      padding: 0;
-      margin: 0;
-
-    }
-
-    li{
+    .profile{
+      position: relative;
+      height: 40px;
       width: 40px;
-      padding: 0;
-      transition: 0.3s;
-      &:hover {
-        transform: rotate(360deg) scale(1.3);
-        cursor: pointer;
+      border-radius: 100%;
+      background: url("https://i-cdn.phonearena.com/images/article/32896-image/Apples-Phil-Schiller-We-dont-use-any-customer-surveys-focus-groups-or-typical-things-of-that-nature.jpg");
+      background-size: cover;
+      background-position: center;
+      float: right;
+      margin-top: 5px;
+      &-toggle{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border-radius: 100%;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+
+      .visible{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0px);
+      }
+
+      &-menu{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        min-width: 200px;
+        height: auto;
+        top:45px;
+        right:-15px;
+        background: #1F282C;
+        color: #b4bcc8;
+        z-index: 30;
+        transform: translateX(200px);
+        transition: 0.2s;
+        padding: 10px 0px 10px 0px;
+        hr{
+          width: 80%;
+          background: #b4bcc8 !important;
+          margin: 0 auto;
+        }
+        ul{
+          width: 100%;
+          li{
+            text-align: left;
+          }
+        }
       }
     }
 

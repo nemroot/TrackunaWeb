@@ -24,13 +24,86 @@
         <div class="description text-left">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </div>
-      <button type="button" class="butn butn-sign" name="button">sign up <i class="fas fa-chevron-right"></i></button>
-      <button type="button" class="butn butn-log" name="button">login <i class="fas fa-chevron-right"></i></button>
+      <button type="button" class="butn butn-sign" name="button" data-toggle="modal" data-target="#sUpModal">sign up <i class="fas fa-chevron-right"></i></button>
+      <button type="button" class="butn butn-log" name="button" data-toggle="modal" data-target="#sInModal">login <i class="fas fa-chevron-right"></i></button>
 
       </div>
 
     </div>
   </header>
+
+  <div class="container">
+    <!-- Modal -->
+    <div class="modal modal-up fade" id="sUpModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            Sign Up
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="/action_page.php" >
+              <div class="form-group">
+                <label for="email">Name:</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+              </div>
+              <button type="submit" class="btn">Sign Up</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <!-- Modal -->
+    <div class="modal modal-in fade" id="sInModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            Sign Up
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="/action_page.php" >
+              <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+              </div>
+              <button type="submit" class="btn btn-succes">Sign Up</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
   <div class="sideMenu">
     <ul class="sideMenu-items display-md-1">
       <li>Home</li>
@@ -239,8 +312,7 @@
     </div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="parallax2.js">
-
-  </script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="parallax2.js"></script>
   <script type="text/javascript" src="showMenu3.js"></script>
 </body>

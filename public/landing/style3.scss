@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lora');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
-
 body{
   margin: 0;
   padding: 0;
@@ -50,6 +49,7 @@ header{
   width: 200px;
   height: 55px;
   float: left;
+  outline: 0 !important;
   margin-top: 20px;
   margin-right: 20px;
   border: none;
@@ -69,6 +69,57 @@ header{
     transform: scale(1.1);
   }
 }
+
+.modal{
+
+  &-in{
+    .modal-header{
+      background: #408EBA;
+    }
+    .modal-body{
+      button{
+        background: #408EBA;
+        &:hover{
+          background: #306e91;
+        }
+      }
+    }
+  }
+  &-up{
+    .modal-header{
+      background: #f75242;
+    }
+    .modal-body{
+      button{
+        background: #f75242;
+        &:hover{
+          background: #b0382d;
+        }
+      }
+    }
+  }
+
+  &-header{
+    color: white;
+    button{
+      color: white;
+    }
+  }
+
+  &-body{
+    input{
+      border-radius: 0;
+    }
+
+    button{
+      width: 100%;
+      color: white;
+    }
+    }
+
+
+}
+
 .topbar{
   position: fixed;
   width: 100%;

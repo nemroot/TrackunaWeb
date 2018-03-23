@@ -4,6 +4,10 @@ $(".toggle-icon").click(function() {
   $('#nav-container').toggleClass("pushed");
 });
 
+$("#profileToggle").click(function() {
+  $('#profileMenu').toggleClass("visible");
+});
+
 if ($( window ).width() > 992) {
   $(".leftMenu").css({
     'left' : '0',
